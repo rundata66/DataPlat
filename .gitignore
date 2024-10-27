@@ -1,5 +1,5 @@
 # 通过 Git 部署项目至线上时建议删除的忽略规则
-/vendor
+# /vendor
 /modules
 /public/*.lock
 /public/index.html
