@@ -34,7 +34,7 @@ export const init = function (): void {
 
     // create particles
     bubble.circles = []
-    for (let x = 0; x < bubble.width * 0.5; x++) {
+    for (let x = 0; x < bubble.width * 0.3; x++) {
         const c = new Circle()
         bubble.circles.push(c)
     }
@@ -78,15 +78,15 @@ class Circle {
             x: Math.random() * bubble.width,
             y: bubble.height + Math.random() * 100,
         }
-        this.alpha = 0.1 + Math.random() * 0.3
-        this.scale = 0.1 + Math.random() * 0.3
+        this.alpha = 0.2 + Math.random() * 0.3
+        this.scale = 0.3 + Math.random() * 0.5
         this.velocity = Math.random()
         this.draw = function () {
             this.pos.y -= this.velocity
             this.alpha -= 0.0005
             bubble.ctx.beginPath()
             bubble.ctx.arc(this.pos.x, this.pos.y, this.scale * 10, 0, 2 * Math.PI, false)
-            bubble.ctx.fillStyle = 'rgba(255,255,255,' + this.alpha + ')'
+            bubble.ctx.fillStyle = 'rgba(176,224,230,' + this.alpha + ')'
             bubble.ctx.fill()
         }
     }

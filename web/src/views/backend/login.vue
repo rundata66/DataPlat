@@ -179,7 +179,7 @@ const onSubmit = (captchaInfo = '') => {
 }
 .bubble {
     overflow: hidden;
-    background: url(/@/assets/bg.jpg) repeat;
+    background: url(/@/assets/bg.jpg) center/cover;
 }
 .form-item-icon {
     height: auto;
